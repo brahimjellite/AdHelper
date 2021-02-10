@@ -1,13 +1,17 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
 
 android {
-    compileSdkVersion versions.compileSdkVersion
+    compileSdkVersion 30
     defaultConfig {
         applicationId "gun0912.tedadhelperdemo"
-        minSdkVersion versions.minSdkVersion
-        targetSdkVersion versions.targetSdkVersion
+        minSdkVersion 16
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -24,12 +28,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation deps.glide.glide
-    annotationProcessor deps.glide.compiler
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
-    implementation deps.support.appcompat
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.cardview:cardview:1.0.0'
 
 
@@ -37,4 +42,13 @@ dependencies {
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 
     implementation project(':tedadhelper')
+    implementation 'com.facebook.android:audience-network-sdk:6.2.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+
+
 }

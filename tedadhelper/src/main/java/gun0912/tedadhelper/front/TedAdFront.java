@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
+import com.facebook.ads.InterstitialAdListener;
 import com.tnkfactory.ad.TnkAdListener;
 import com.tnkfactory.ad.TnkSession;
 
@@ -112,7 +113,7 @@ public class TedAdFront {
 
 
         // Set listeners for the Interstitial Ad
-        facebookFrontAD.setAdListener(new com.facebook.ads.InterstitialAdListener() {
+        InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
                 // Interstitial displayed callback
@@ -169,11 +170,10 @@ public class TedAdFront {
             public void onLoggingImpression(Ad ad) {
 
             }
-        });
+        };
 
         // Load the interstitial ad
         facebookFrontAD.loadAd();
-
 
     }
 

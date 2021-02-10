@@ -17,9 +17,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.facebook.ads.Ad;
-import com.facebook.ads.AdChoicesView;
 import com.facebook.ads.AdError;
+import com.facebook.ads.AdListener;
+import com.facebook.ads.AdOptionsView;
 import com.facebook.ads.MediaView;
+import com.facebook.ads.NativeAdLayout;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -490,7 +492,8 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
         view_container.setVisibility(View.INVISIBLE);
 
         facebookAd = new com.facebook.ads.NativeAd(context, facebook_ad_key);
-        facebookAd.setAdListener(new com.facebook.ads.NativeAdListener() {
+
+        com.facebook.ads.NativeAdListener nativeAdListener = new com.facebook.ads.NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {
 
@@ -524,7 +527,7 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
             public void onLoggingImpression(Ad ad) {
 
             }
-        });
+        };
         facebookAd.loadAd();
     }
 
@@ -559,8 +562,11 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
 
         bindNativeAd(myNativeAd);
 
-        AdChoicesView adChoicesView = new AdChoicesView(context, facebookAd, true);
-        view_ad_choice.addView(adChoicesView);
+        NativeAdLayout nativeAdLayout = new NativeAdLayout(context);
+        AdOptionsView adOptionsView = new AdOptionsView(context,facebookAd,nativeAdLayout);
+
+        //AdChoicesView adChoicesView = new AdChoicesView(context, facebookAd, true);
+        view_ad_choice.addView(adOptionsView);
 
         List<View> clickableViews = new ArrayList<>();
         clickableViews.add(ivLogo);

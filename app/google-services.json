@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "949359643209",
+    "firebase_url": "https://guidetemplate-86e53.firebaseio.com",
+    "project_id": "guidetemplate-86e53",
+    "storage_bucket": "guidetemplate-86e53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949359643209:android:fc831e76d879d8daad8d98",
+        "android_client_info": {
+          "package_name": "gun0912.tedadhelperdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949359643209-cku7ma3qjv869dn5cec6dgen9nfqridj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiSCZJB48qlR9zDm8lABNMbsG5Vwi8FTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949359643209-cku7ma3qjv869dn5cec6dgen9nfqridj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

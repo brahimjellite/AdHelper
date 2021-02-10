@@ -241,6 +241,7 @@ public class TedBackPressDialog extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // 현재 상태를 저장한다.
+        super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString(EXTRA_APP_NAME, appName);
         savedInstanceState.putString(EXTRA_FACEBOOK_KEY, facebookKey);
         savedInstanceState.putString(EXTRA_ADMOB_KEY, admobKey);

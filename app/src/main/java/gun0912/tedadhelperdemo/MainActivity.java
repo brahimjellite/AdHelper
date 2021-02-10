@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "ted";
 
-    public static final String FACEBOOK_KEY_BANNER = "619030564953912_619030908287211";
-    public static final String FACEBOOK_KEY_FRONT = "619030564953912_619030944953874";
-    public static final String FACEBOOK_KEY_BACKPRESS = "619030564953912_619030998287202";
-    public static final String FACEBOOK_KEY_NATIVE = "619030564953912_619047201618915";
+    public static final String FACEBOOK_KEY_BANNER = "203020497700383_256457595690006";
+    public static final String FACEBOOK_KEY_FRONT = "203020497700383_427661591902938";
+    public static final String FACEBOOK_KEY_BACKPRESS = "203020497700383_427661248569639";
+    public static final String FACEBOOK_KEY_NATIVE = "203020497700383_203021207700312";
 
 
     public static final String ADMOB_KEY_BANNER = "ca-app-pub-3940256099942544/6300978111";
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TedAdHelper.setAdmobTestDeviceId("");
-        TedAdHelper.setFacebookTestDeviceId("a98d1b46ac78a180d6571bec2e4348af");
+        //TedAdHelper.setAdmobTestDeviceId("");
+        //TedAdHelper.setFacebookTestDeviceId("a98d1b46ac78a180d6571bec2e4348af");
         //TedAdHelper.showAdOnlyFacebookInstalledUser(true);
 
 
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         //TedBackPressDialog.startFacebookDialog();
         //TedBackPressDialog.startAdmobDialog();
         String facebookKeyBackPress = "VID_HD_9_16_39S_APP_INSTALL#"+FACEBOOK_KEY_BACKPRESS;
-        TedBackPressDialog.startDialog(this, getString(R.string.app_name), facebookKeyBackPress, ADMOB_KEY_BACKPRESS, new Integer[]{TedAdHelper.AD_FACEBOOK,TedAdHelper.AD_ADMOB }, TedAdHelper.ADMOB_NATIVE_AD_TYPE.BANNER, false, new OnBackPressListener() {
+        TedBackPressDialog.startDialog(this, getString(R.string.app_name), facebookKeyBackPress, null, new Integer[]{TedAdHelper.AD_FACEBOOK }, TedAdHelper.ADMOB_NATIVE_AD_TYPE.BANNER, true, new OnBackPressListener() {
             @Override
             public void onReviewClick() {
             }

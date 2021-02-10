@@ -113,7 +113,7 @@ public class TedAdBanner {
             onBannerAdListener.onFacebookAdCreated(facebookBanner);
         }
 
-        facebookBanner.setAdListener(new AdListener() {
+        AdListener adListener = new AdListener() {
             @Override
             public void onError(Ad ad, AdError adError) {
                 Log.e(TedAdHelper.TAG, "[FACEBOOK BANNER]Error: " + adError.getErrorMessage());
@@ -156,8 +156,8 @@ public class TedAdBanner {
             public void onLoggingImpression(Ad ad) {
 
             }
+        };
 
-        });
         facebookBanner.loadAd();
 
     }

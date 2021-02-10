@@ -15,7 +15,7 @@
         />
 
 
-    <androidx.appcompat.widget.CardView
+    <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cardview"
@@ -28,7 +28,7 @@
         app:cardUseCompatPadding="true">
 
 
-    </androidx.appcompat.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

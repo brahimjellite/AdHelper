@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TedAdHelper</string>
+    <string name="app_name" translatable="false">TedAdHelper</string>
 
 
     <string name="review_go">Go review</string>
