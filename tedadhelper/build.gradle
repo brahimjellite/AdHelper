@@ -32,7 +32,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation deps.support.appcompat
     api 'com.google.firebase:firebase-ads:15.0.0'
-    api 'com.android.support:recyclerview-v7:25.3.1'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
     api ("com.facebook.android:audience-network-sdk:${versions.fan}"){
         exclude group: "com.google.android.gms"
     }

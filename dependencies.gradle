@@ -1,10 +1,10 @@
 ext {
     versions = [
             'minSdkVersion'    : 16,
-            'compileSdkVersion': 27,
-            'targetSdkVersion' : 25,
+            'compileSdkVersion': 30,
+            'targetSdkVersion' : 30,
 
-            'supportLibrary'   : '27.1.1',
+            'supportLibrary'   : '30.0.2',
             'fan'              : '5.0.1',
     ]
 
@@ -19,7 +19,7 @@ ext {
             ],
 
             'support': [
-                    'appcompat': "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    'appcompat': 'androidx.appcompat:appcompat:1.0.0',
             ],
 
     ]

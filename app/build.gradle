@@ -30,7 +30,7 @@ dependencies {
     annotationProcessor deps.glide.compiler
 
     implementation deps.support.appcompat
-    implementation "com.android.support:cardview-v7:${versions.supportLibrary}"
+    implementation 'androidx.cardview:cardview:1.0.0'
 
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
