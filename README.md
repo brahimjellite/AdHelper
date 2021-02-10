@@ -1,5 +1,7 @@
 # What is TedAdHelper?<br/><br/>
 
+Note: This is a fork to update the origin project. You can checket out Here (https://github.com/ParkSangGwon/TedAdHelper).
+
 ## English
 Do you have your application?<br/>
 Do you want make money using your application?<br/>
@@ -46,7 +48,7 @@ Admob과 Facebook Audience Network를 사용하면서 2개 광고를 [미디에�
 [ ![Download](https://api.bintray.com/packages/tkdrnjs0912/maven/tedadhelper/images/download.svg) ](https://bintray.com/tkdrnjs0912/maven/tedadhelper/_latestVersion)
 ```javascript
 dependencies {
-    compile 'gun0912.ted:tedadhelper:x.y.z'
+    implementation 'gun0912.ted:tedadhelper:x.y.z'
 }
 
 ```
