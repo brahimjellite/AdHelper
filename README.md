@@ -1,6 +1,6 @@
 # What is TedAdHelper?<br/><br/>
 
-Note: This is a fork to update the origin project. You can checket out Here (https://github.com/ParkSangGwon/TedAdHelper).
+Note: This is a fork to update the origin project. You can checket out [Here](https://github.com/ParkSangGwon/TedAdHelper).
 
 ## English
 Do you have your application?<br/>
