@@ -8,7 +8,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.facebook.ads.AdSettings;
 import com.facebook.ads.InterstitialAd;
+import com.google.android.gms.ads.RequestConfiguration;
+
+import java.util.Arrays;
 
 import gun0912.tedadhelper.TedAdHelper;
 import gun0912.tedadhelper.backpress.OnBackPressListener;
@@ -45,9 +49,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TedAdHelper.setAdmobTestDeviceId("");
         //TedAdHelper.setFacebookTestDeviceId("a98d1b46ac78a180d6571bec2e4348af");
         //TedAdHelper.showAdOnlyFacebookInstalledUser(true);
+
+        TedAdHelper.setAdmobTestDeviceId("39FCA51243B7C2F2D542A942F2B243D5");
+        AdSettings.addTestDevice("99465096-1165-4894-8259-a8fb1945367e");
+
 
 
         /**
@@ -155,9 +162,35 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         //TedBackPressDialog.startFacebookDialog();
-        //TedBackPressDialog.startAdmobDialog();
-        String facebookKeyBackPress = "VID_HD_9_16_39S_APP_INSTALL#"+FACEBOOK_KEY_BACKPRESS;
-        TedBackPressDialog.startDialog(this, getString(R.string.app_name), facebookKeyBackPress, null, new Integer[]{TedAdHelper.AD_FACEBOOK }, TedAdHelper.ADMOB_NATIVE_AD_TYPE.BANNER, true, new OnBackPressListener() {
+        TedBackPressDialog.startAdmobDialog(this, getString(R.string.app_name), ADMOB_KEY_BACKPRESS, new OnBackPressListener() {
+            @Override
+            public void onReviewClick() {
+
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+
+            }
+
+            @Override
+            public void onLoaded(int adType) {
+
+            }
+
+            @Override
+            public void onAdClicked(int adType) {
+
+            }
+        });
+
+/*
+        TedBackPressDialog.startDialog(this, getString(R.string.app_name), FACEBOOK_KEY_BACKPRESS, ADMOB_KEY_BACKPRESS,TedAdHelper.AD_FACEBOOK,TedAdHelper.ADMOB_NATIVE_AD_TYPE.NATIVE_ADVANCED, new OnBackPressListener() {
             @Override
             public void onReviewClick() {
             }
@@ -178,12 +211,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdClicked(int adType) {
             }
-        }, new TedAdHelper.ImageProvider() {
-            @Override
-            public void onProvideImage(ImageView imageView, String imageUrl) {
-                Glide.with(MainActivity.this).load(imageUrl).into(imageView);
-            }
         });
+*/
     }
 
 

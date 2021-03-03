@@ -92,7 +92,7 @@ public class TedBackPressDialog extends AppCompatActivity {
     }
 
     public static void startAdmobDialog(Activity activity, String appName, String admobKey, OnBackPressListener onBackPressListener) {
-        startDialog(activity, appName, null, admobKey, TedAdHelper.AD_ADMOB, TedAdHelper.ADMOB_NATIVE_AD_TYPE.NATIVE_EXPRESS, onBackPressListener);
+        startDialog(activity, appName, null, admobKey, TedAdHelper.AD_ADMOB, TedAdHelper.ADMOB_NATIVE_AD_TYPE.NATIVE_ADVANCED, onBackPressListener);
     }
 
     @Override

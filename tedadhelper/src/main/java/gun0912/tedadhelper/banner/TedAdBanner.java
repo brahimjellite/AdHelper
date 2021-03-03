@@ -18,6 +18,7 @@ import gun0912.tedadhelper.util.Constant;
 
 /**
  * Created by TedPark on 2017. 1. 18..
+ * Edited by BJ 2021
  */
 
 public class TedAdBanner {
