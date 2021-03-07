@@ -16,6 +16,8 @@ import gun0912.tedadhelper.util.Constant;
 
 /**
  * Created by TedPark on 2017. 3. 7..
+ *
+ * Edited by BrahimJe 2021
  */
 
 public class TedAdHelper {

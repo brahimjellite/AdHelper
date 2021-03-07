@@ -30,5 +30,14 @@
 
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="183dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/bannerContainer"
+        android:layout_marginBottom="240dp"
+        android:onClick="ShowInter"
+        android:text="Button" />
+
 
 </RelativeLayout>

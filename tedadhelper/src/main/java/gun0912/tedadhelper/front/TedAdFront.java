@@ -173,7 +173,9 @@ public class TedAdFront {
         };
 
         // Load the interstitial ad
-        facebookFrontAD.loadAd();
+        facebookFrontAD.loadAd(facebookFrontAD.buildLoadAdConfig()
+                .withAdListener(interstitialAdListener)
+                .build());
 
     }
 

@@ -314,7 +314,6 @@ public class TedNativeAd {
                     onNativeAdListener.onLoaded(TedAdHelper.AD_ADMOB);
                 }
 
-
             }
 
             @Override
@@ -430,6 +429,8 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
         viewNativeRoot.setVisibility(View.VISIBLE);
         progressView.setVisibility(View.VISIBLE);
         view_container.setVisibility(View.INVISIBLE);
+        nativeAdMedia.setVisibility(View.GONE);
+
 
         AdLoader.Builder builder = new AdLoader.Builder(context, admob_ad_key);
         builder.forAppInstallAd(new NativeAppInstallAd.OnAppInstallAdLoadedListener() {
@@ -490,6 +491,8 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
         viewNativeRoot.setVisibility(View.VISIBLE);
         progressView.setVisibility(View.VISIBLE);
         view_container.setVisibility(View.INVISIBLE);
+        nativeAdMedia.setVisibility(View.VISIBLE);
+
 
         facebookAd = new com.facebook.ads.NativeAd(context, facebook_ad_key);
 
@@ -528,7 +531,9 @@ container_admob_express.getViewTreeObserver().removeGlobalOnLayoutListener(this)
 
             }
         };
-        facebookAd.loadAd();
+        facebookAd.loadAd(facebookAd.buildLoadAdConfig()
+                .withAdListener(nativeAdListener)
+                .build());
     }
 
     private void bindTnkAD(NativeAdItem adItem) {

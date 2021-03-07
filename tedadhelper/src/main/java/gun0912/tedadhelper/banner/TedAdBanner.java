@@ -159,7 +159,7 @@ public class TedAdBanner {
             }
         };
 
-        facebookBanner.loadAd();
+        facebookBanner.loadAd(facebookBanner.buildLoadAdConfig().withAdListener(adListener).build());
 
     }
 

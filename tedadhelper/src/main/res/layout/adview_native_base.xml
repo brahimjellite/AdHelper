@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     tools:background="@color/white">
 
 
@@ -16,14 +18,6 @@
             android:id="@+id/admobContentRootView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
-            <!--
-                android:layout_marginBottom="3dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="3dp"
-                -->
 
 
             <RelativeLayout
@@ -101,7 +95,7 @@
                     <com.facebook.ads.MediaView
                         android:id="@+id/native_ad_media"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="200dp"
                         android:maxHeight="300dp"
                         />
 
